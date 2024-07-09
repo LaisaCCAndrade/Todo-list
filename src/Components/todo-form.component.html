@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar Nova Tarefa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-container">
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+      <ion-list>
+        <ion-item>
+          <ion-label>Título</ion-label>
+          <ion-input formControlName="title" type="text"></ion-input>
+        </ion-item>
+        <ion-text
+          color="danger"
+          *ngIf="todoForm.get('title')?.invalid && todoForm.get('title')?.touched"
+        >
+          O título é obrigatório
+        </ion-text>
+
+        <ion-item>
+          <ion-label>Descrição</ion-label>
+          <ion-input formControlName="description" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Concluída</ion-label>
+          <ion-checkbox formControlName="isCompleted"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <ion-button expand="block" type="submit" [disabled]="todoForm.invalid">
+            Criar Tarefa
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,71 @@
+/* Estilos para o formulário de tarefas */
+ion-header {
+  ion-toolbar {
+    --background: #422430; /* Azul moderno */
+    --color: #fff; /* Texto branco */
+    --border-radius: 0; /* Borda reta */
+
+    ion-title {
+      font-size: 20px; /* Tamanho da fonte do título */
+      text-align: center; /* Centraliza o título */
+      margin: 0; /* Remove margens adicionais */
+    }
+  }
+}
+
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #cbddf118;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1024px;
+      width: 100%;
+      margin: 30px auto;
+
+    ion-list {
+      border-radius: 10px;
+      width: 100%; /* Garante que a lista use toda a largura disponível até o máximo */
+      margin: 0 auto; /* Centraliza a lista horizontalmente */
+
+      ion-item {
+        --background: #ffffff; /* Fundo branco */
+        --border-radius: 8px; /* Bordas arredondadas */
+        --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        padding: 0; /* Remove padding extra dos items */
+        margin-bottom: 10px; /* Espaço entre os itens */
+
+        ion-label {
+          color: #333; /* Cor do texto do label */
+          font-size: 16px; /* Tamanho da fonte do texto */
+        }
+
+        ion-input {
+          --padding-start: 12px; /* Padding interno à esquerda */
+          --border-radius: 6px; /* Bordas arredondadas */
+          --box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra interna */
+        }
+      }
+    }
+
+    ion-text {
+      font-size: 14px; /* Tamanho da fonte do texto de erro */
+      margin-top: 8px; /* Espaçamento acima do texto de erro */
+    }
+
+    ion-row {
+      margin-top: 16px; /* Espaçamento acima da linha */
+    }
+
+    ion-button {
+      --border-radius: 6px; /* Bordas arredondadas no botão */
+      --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+      --background: #28a745; /* Verde para o botão */
+      --color: #fff; /* Texto branco */
+      --padding: 12px 0; /* Padding vertical */
+    }
+  }
+

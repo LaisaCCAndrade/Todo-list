@@ -1,0 +1,57 @@
+<!-- src/app/components/todo-edit/todo-edit.component.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="dismiss()">
+        <ion-icon name="pencil" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Tarefa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="dismiss()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input
+          formControlName="title"
+          placeholder="Enter task title"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label position="floating">Descrição</ion-label>
+        <ion-input
+          formControlName="description"
+          placeholder="Enter task description"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label>Concluída</ion-label>
+        <ion-checkbox
+          formControlName="isCompleted"
+        ></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-row class="margin-top-custom">
+      <ion-col>
+        <ion-button
+          expand="full"
+          type="submit"
+          color="success"
+          [disabled]="todoForm.invalid"
+          class="save-button"
+        >
+          <ion-icon name="checkmark-outline"></ion-icon>
+          <span>Salvar</span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

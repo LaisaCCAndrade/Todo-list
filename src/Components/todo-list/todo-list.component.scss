@@ -1,0 +1,85 @@
+/* Estilos globais para o card */
+ion-header {
+  ion-toolbar {
+    --background: #422430; /* Azul moderno */
+    --color: #fff; /* Texto branco */
+    --border-radius: 0; /* Borda reta */
+
+    ion-title {
+      font-size: 20px; /* Tamanho da fonte do título */
+      text-align: center; /* Centraliza o título */
+      margin: 0; /* Remove margens adicionais */
+    }
+  }
+}
+
+ion-card {
+  --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  --border-radius: 8px; /* Bordas arredondadas */
+  --background: #ffffff46; /* Fundo branco */
+  --padding: 0; /* Padding do card */
+  margin-bottom: 16px; /* Espaço entre os cards */
+}
+
+ion-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Garante que o título e o checkbox estejam em extremos opostos */
+  --padding: 16px; /* Padding no cabeçalho do card */
+}
+
+ion-card-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #9c030d;
+}
+
+ion-card-content {
+  padding: 16px;
+  text-align: left; /* Texto alinhado à esquerda */
+}
+
+ion-card-content p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #0A1C26;
+}
+
+ion-img {
+  border-radius: 8px;
+  width: 100%; /* Garante que a imagem não ultrapasse o card */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Ajusta a imagem ao contêiner */
+}
+
+.card-footer {
+  padding: 12px;
+  border-top: 1px solid #ddd; /* Adiciona uma borda superior para o rodapé */
+  display: flex;
+  justify-content: space-between; /* Distribui os botões com espaço entre eles */
+}
+
+.create-task-button {
+  font-size: 1.25rem;
+  color: #888;
+  text-align: center;
+}
+
+.no-border {
+  border: none !important; /* Remove a borda do botão */
+  box-shadow: none !important; /* Remove a sombra do botão */
+}
+
+ion-button {
+  --border-radius: 8px; /* Bordas arredondadas */
+  --background: #ffffff96; /* Fundo branco */
+}
+
+.trash-button {
+  --color: #e94e77; /* Cor do ícone de lixeira */
+}
+
+.edit-button {
+  --color: #4a90e2; /* Cor do ícone de lápis */
+}

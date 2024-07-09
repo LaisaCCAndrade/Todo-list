@@ -1,0 +1,68 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+.custom-modal {
+  --width: 90vw;
+  --max-width: 500px;
+  --height: 90vh;
+  --max-height: 350px;
+  --border-radius: 12px;
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-container {
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo no início */
+  align-items: flex-start; /* Alinha o conteúdo no início */
+  background-image: url('./assets/icon/bg.jpg'); /* Caminho para a imagem de fundo */
+  background-size: cover; /* Ajusta a imagem para cobrir a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos a altura da tela */
+  width: 100vw; /* Garante que o conteúdo ocupe toda a largura da tela */
+  position: absolute; /* Garante que o conteúdo seja posicionado em relação a este elemento */
+  overflow: auto;
+}
+
