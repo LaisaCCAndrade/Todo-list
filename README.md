@@ -22,7 +22,7 @@ Antes de iniciar o projeto, certifique-se de ter os seguintes requisitos instala
 1. **Clone o Repositório:**
 
    ```bash
-   git clone [git@github.com:LaisaCCAndrade/Todo-list.git](https://github.com/LaisaCCAndrade/Todo-list.git)
+   git clone https://github.com/LaisaCCAndrade/Todo-list.git
    cd seu-repositorio
 
 2. **Restaurar Pacotes:**
