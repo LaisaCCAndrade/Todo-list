@@ -1,6 +1,6 @@
-# Todo List Application
+# Lista de Tarefas
 
-Este é um projeto de lista de tarefas (todo list) desenvolvido com um backend em ASP.NET Core, um frontend em Ionic com Angular e um banco de dados SQL Server.
+Este é um projeto de lista de tarefas desenvolvido com um backend em ASP.NET Core, um frontend em Ionic com Angular e um banco de dados SQL Server.
 
 ## Tecnologias Utilizadas
 
@@ -52,7 +52,6 @@ Antes de iniciar o projeto, certifique-se de ter os seguintes requisitos instala
      ```bash
       dotnet run
 
-
 ## Configuração do Frontend
 
 1. **Instalar Dependências:**
@@ -73,10 +72,13 @@ Antes de iniciar o projeto, certifique-se de ter os seguintes requisitos instala
 
    Atualize o endpoint da API no arquivo src/app/Service/todo.service.ts para apontar para o seu backend:
 
-
 4. **Executar o Frontend:**
 
    Inicie o frontend:
 
      ```bash
       ionic serve
+
+O frontend estará disponível em http://localhost:8100.
+
+*Não esqueça de criar o banco de dados*
