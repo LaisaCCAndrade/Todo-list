@@ -25,7 +25,7 @@ export class TodoFormComponent implements OnInit {
     this.todoForm = this.fb.group({
       title: ['', Validators.required],
       description: [''],
-      isCompleted: [false]
+      isCompleted: [false],
     });
   }
 
@@ -49,7 +49,7 @@ export class TodoFormComponent implements OnInit {
         this.todoService.updateTodo(this.todoId, todo).subscribe(
           () => {
             this.successMessage = 'Todo updated successfully';
-            this.router.navigate(['/todos']); // Navegar de volta para a lista
+            this.router.navigate(['/todos']);
           },
           (error: HttpErrorResponse) => {
             this.errorMessage = 'Error updating todo';
@@ -60,7 +60,7 @@ export class TodoFormComponent implements OnInit {
         this.todoService.addTodo(todo).subscribe(
           () => {
             this.successMessage = 'Todo added successfully';
-            this.router.navigate(['/todos']); // Navegar de volta para a lista
+            this.router.navigate(['/todos']);
           },
           (error: HttpErrorResponse) => {
             this.errorMessage = 'Error adding todo';

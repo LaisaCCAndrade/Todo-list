@@ -27,9 +27,9 @@ export class TodoService {
   }
 
   addTodo(todo: Todo): Observable<Todo> {
-    return this.http.post<Todo>(this.apiUrl, todo).pipe(
-      tap(() => this.loadTodos()) // Atualiza a lista após adicionar
-    );
+    return this.http
+      .post<Todo>(this.apiUrl, todo)
+      .pipe(tap(() => this.loadTodos()));
   }
 
   getTodoById(id: number): Observable<Todo> {
@@ -37,14 +37,14 @@ export class TodoService {
   }
 
   deleteTodo(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
-      tap(() => this.loadTodos()) // Atualiza a lista após deletar
-    );
+    return this.http
+      .delete<void>(`${this.apiUrl}/${id}`)
+      .pipe(tap(() => this.loadTodos()));
   }
 
   updateTodo(id: number, todo: Todo): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/${id}`, todo).pipe(
-      tap(() => this.loadTodos()) // Atualiza a lista após atualizar
-    );
+    return this.http
+      .put<void>(`${this.apiUrl}/${id}`, todo)
+      .pipe(tap(() => this.loadTodos()));
   }
 }

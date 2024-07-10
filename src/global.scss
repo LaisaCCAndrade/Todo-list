@@ -54,15 +54,14 @@ ion-content {
 
 .background-container {
   display: flex;
-  justify-content: flex-start; /* Alinha o conteúdo no início */
-  align-items: flex-start; /* Alinha o conteúdo no início */
-  background-image: url('./assets/icon/bg.jpg'); /* Caminho para a imagem de fundo */
-  background-size: cover; /* Ajusta a imagem para cobrir a tela */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição da imagem */
-  min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos a altura da tela */
-  width: 100vw; /* Garante que o conteúdo ocupe toda a largura da tela */
-  position: absolute; /* Garante que o conteúdo seja posicionado em relação a este elemento */
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-image: url("./assets/icon/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
   overflow: auto;
 }
-

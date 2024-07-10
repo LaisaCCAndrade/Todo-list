@@ -14,7 +14,9 @@
         </ion-item>
         <ion-text
           color="danger"
-          *ngIf="todoForm.get('title')?.invalid && todoForm.get('title')?.touched"
+          *ngIf="
+            todoForm.get('title')?.invalid && todoForm.get('title')?.touched
+          "
         >
           O título é obrigatório
         </ion-text>
@@ -32,7 +34,11 @@
 
       <ion-row class="ion-justify-content-center">
         <ion-col size="6">
-          <ion-button expand="block" type="submit" [disabled]="todoForm.invalid">
+          <ion-button
+            expand="block"
+            type="submit"
+            [disabled]="todoForm.invalid"
+          >
             Criar Tarefa
           </ion-button>
         </ion-col>

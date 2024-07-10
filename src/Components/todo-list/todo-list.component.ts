@@ -21,13 +21,11 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
     this.todoService.getTodos().subscribe(
       (data: Todo[]) => {
-        console.log('Dados recebidos:', data); // Adicione este log
         this.todos = data;
       },
       (error: HttpErrorResponse) => console.error('Error fetching todos', error)
     );
   }
-
 
   async openEditModal(todo: Todo | null) {
     const modal = await this.modalCtrl.create({
@@ -37,10 +35,10 @@ export class TodoListComponent implements OnInit {
     });
 
     modal.onDidDismiss().then(() => {
-      // Recarrega a lista de tarefas ao fechar o modal
       this.todoService.getTodos().subscribe(
         (data: Todo[]) => (this.todos = data),
-        (error: HttpErrorResponse) => console.error('Error fetching todos', error)
+        (error: HttpErrorResponse) =>
+          console.error('Error fetching todos', error)
       );
     });
 
@@ -50,10 +48,10 @@ export class TodoListComponent implements OnInit {
   deleteTodo(id: number) {
     this.todoService.deleteTodo(id).subscribe(
       () => {
-        // Recarrega a lista após a exclusão
         this.todoService.getTodos().subscribe(
           (data: Todo[]) => (this.todos = data),
-          (error: HttpErrorResponse) => console.error('Error fetching todos', error)
+          (error: HttpErrorResponse) =>
+            console.error('Error fetching todos', error)
         );
       },
       (error: HttpErrorResponse) => console.error('Error deleting todo', error)

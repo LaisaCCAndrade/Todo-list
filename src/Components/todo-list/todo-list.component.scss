@@ -1,31 +1,34 @@
-/* Estilos globais para o card */
 ion-header {
   ion-toolbar {
-    --background: #422430; /* Azul moderno */
-    --color: #fff; /* Texto branco */
-    --border-radius: 0; /* Borda reta */
+    --background: #091a21;
+    --color: #fff;
+    --border-radius: 0;
+    border-bottom: 5px solid #000000;
 
     ion-title {
-      font-size: 20px; /* Tamanho da fonte do título */
-      text-align: center; /* Centraliza o título */
-      margin: 0; /* Remove margens adicionais */
+      font-size: 30px;
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+      margin: 0;
     }
   }
 }
 
 ion-card {
-  --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  --border-radius: 8px; /* Bordas arredondadas */
-  --background: #ffffff46; /* Fundo branco */
-  --padding: 0; /* Padding do card */
-  margin-bottom: 16px; /* Espaço entre os cards */
+  --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --background: #ffffff46;
+  --padding: 0;
+  margin-bottom: 16px;
+  width: 300px;
 }
 
 ion-card-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Garante que o título e o checkbox estejam em extremos opostos */
-  --padding: 16px; /* Padding no cabeçalho do card */
+  justify-content: space-between;
+  --padding: 16px;
 }
 
 ion-card-title {
@@ -36,28 +39,21 @@ ion-card-title {
 
 ion-card-content {
   padding: 16px;
-  text-align: left; /* Texto alinhado à esquerda */
+  text-align: left;
 }
 
 ion-card-content p {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
-  color: #0A1C26;
-}
-
-ion-img {
-  border-radius: 8px;
-  width: 100%; /* Garante que a imagem não ultrapasse o card */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: cover; /* Ajusta a imagem ao contêiner */
+  color: #0a1c26;
 }
 
 .card-footer {
   padding: 12px;
-  border-top: 1px solid #ddd; /* Adiciona uma borda superior para o rodapé */
+  border-top: 1px solid #ddd;
   display: flex;
-  justify-content: space-between; /* Distribui os botões com espaço entre eles */
+  justify-content: space-between;
 }
 
 .create-task-button {
@@ -66,20 +62,60 @@ ion-img {
   text-align: center;
 }
 
-.no-border {
-  border: none !important; /* Remove a borda do botão */
-  box-shadow: none !important; /* Remove a sombra do botão */
+#no-border {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 ion-button {
-  --border-radius: 8px; /* Bordas arredondadas */
-  --background: #ffffff96; /* Fundo branco */
+  --border-radius: 8px;
+  --background: #ffffff96;
 }
 
 .trash-button {
-  --color: #e94e77; /* Cor do ícone de lixeira */
+  --color: #e94e77;
 }
 
 .edit-button {
-  --color: #4a90e2; /* Cor do ícone de lápis */
+  --color: #4a90e2;
 }
+
+@media (max-width: 768px) {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  ion-card {
+    width: 100%;
+    margin: 0 8px;
+  }
+
+  ion-card-header {
+    align-items: flex-start;
+  }
+
+  .card-footer {
+    align-items: flex-start;
+    padding: 8px;
+    border-top: none;
+  }
+}
+
+@media (max-width: 480px) {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  ion-card {
+    margin: 0 4px;
+  }
+}
+

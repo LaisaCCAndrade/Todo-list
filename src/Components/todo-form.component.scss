@@ -1,71 +1,73 @@
-/* Estilos para o formulário de tarefas */
 ion-header {
   ion-toolbar {
-    --background: #422430; /* Azul moderno */
-    --color: #fff; /* Texto branco */
-    --border-radius: 0; /* Borda reta */
+    --background: #091a21;
+    --color: #fff;
+    --border-radius: 0;
+    border-bottom: 5px solid #000000;
 
     ion-title {
-      font-size: 20px; /* Tamanho da fonte do título */
-      text-align: center; /* Centraliza o título */
-      margin: 0; /* Remove margens adicionais */
+      font-size: 30px;
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+      margin: 0;
     }
   }
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #cbddf118;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1024px;
+  width: 500px;
+  height: 400px;
+  margin: 30px auto;
 
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: #cbddf118;
-    padding: 20px;
+  ion-list {
     border-radius: 10px;
-    max-width: 1024px;
-      width: 100%;
-      margin: 30px auto;
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    padding-top: 40px;
 
-    ion-list {
-      border-radius: 10px;
-      width: 100%; /* Garante que a lista use toda a largura disponível até o máximo */
-      margin: 0 auto; /* Centraliza a lista horizontalmente */
+    ion-item {
+      --background: #ffffff;
+      --border-radius: 8px;
+      --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 0;
+      margin-bottom: 10px;
 
-      ion-item {
-        --background: #ffffff; /* Fundo branco */
-        --border-radius: 8px; /* Bordas arredondadas */
-        --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-        padding: 0; /* Remove padding extra dos items */
-        margin-bottom: 10px; /* Espaço entre os itens */
-
-        ion-label {
-          color: #333; /* Cor do texto do label */
-          font-size: 16px; /* Tamanho da fonte do texto */
-        }
-
-        ion-input {
-          --padding-start: 12px; /* Padding interno à esquerda */
-          --border-radius: 6px; /* Bordas arredondadas */
-          --box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra interna */
-        }
+      ion-label {
+        color: #333;
+        font-size: 16px;
       }
-    }
 
-    ion-text {
-      font-size: 14px; /* Tamanho da fonte do texto de erro */
-      margin-top: 8px; /* Espaçamento acima do texto de erro */
-    }
-
-    ion-row {
-      margin-top: 16px; /* Espaçamento acima da linha */
-    }
-
-    ion-button {
-      --border-radius: 6px; /* Bordas arredondadas no botão */
-      --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-      --background: #28a745; /* Verde para o botão */
-      --color: #fff; /* Texto branco */
-      --padding: 12px 0; /* Padding vertical */
+      ion-input {
+        --padding-start: 12px;
+        --border-radius: 6px;
+        --box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
+  ion-text {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  ion-row {
+    margin-top: 16px;
+  }
+
+  ion-button {
+    --border-radius: 6px;
+    --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --background: #28a745;
+    --color: #fff;
+    --padding: 12px 0;
+  }
+}

@@ -1,48 +1,50 @@
-/* Estilos globais para o modal */
 ion-header {
   ion-toolbar {
-    --background: #422430; /* Azul claro moderno */
-    --color: #fff; /* Texto branco */
-    --border-radius: 0; /* Borda reta */
+    --background: #091a21;
+    --color: #fff;
+    --border-radius: 0;
+    border-bottom: 5px solid #000000;
 
     ion-buttons {
       ion-button {
-        --color: #fff; /* Cor dos ícones */
-        --border: none; /* Remove a borda do botão */
-        --box-shadow: none; /* Remove sombra do botão */
-        --background: transparent; /* Fundo transparente */
+        --color: #fff;
+        --border: none;
+        --box-shadow: none;
+        --background: transparent;
         ion-icon {
-          font-size: 24px; /* Tamanho do ícone */
+          font-size: 24px;
         }
       }
 
       &[slot="start"] {
         ion-button {
-          --padding-start: 0; /* Remove padding extra à esquerda */
+          --padding-start: 0;
         }
       }
 
       &[slot="end"] {
         ion-button {
-          --padding-end: 0; /* Remove padding extra à direita */
+          --padding-end: 0;
         }
       }
     }
 
     ion-title {
-      font-size: 20px; /* Tamanho da fonte do título */
-      text-align: center; /* Centraliza o título */
-      margin: 0; /* Remove margens adicionais */
+      font-size: 30px;
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+      margin: 0;
     }
   }
 }
 
 ion-content {
-  --padding: 16px; /* Padding uniforme */
+  --padding: 16px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Espaça o conteúdo do modal para que o botão fique no final */
+  justify-content: space-between;
 }
 
 ion-list {
@@ -50,31 +52,41 @@ ion-list {
 }
 
 ion-item {
-  --padding-start: 8px; /* Padding à esquerda */
-  --padding-end: 8px; /* Padding à direita */
-  --margin-bottom: 16px; /* Espaço abaixo do item */
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --margin-bottom: 16px;
 }
 
 ion-input {
   --padding-start: 12px;
-  --border-radius: 6px; /* Bordas arredondadas */
-  --box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra interna */
-  --border: none; /* Remove a borda padrão */
-  border-bottom: 1px solid var(--ion-item-border-color, var(--ion-border-color, var(--ion-color-step-150, var(--ion-background-color-step-150, rgba(0, 0, 0, 0.13))))); /* Linha abaixo do input */
-  margin-top: 8px; /* Espaço acima do input para visibilidade da linha */
+  --border-radius: 6px;
+  --box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+  --border: none;
+  border-bottom: 1px solid
+    var(
+      --ion-item-border-color,
+      var(
+        --ion-border-color,
+        var(
+          --ion-color-step-150,
+          var(--ion-background-color-step-150, rgba(0, 0, 0, 0.13))
+        )
+      )
+    );
+  margin-top: 8px;
 }
 
 .save-button {
-  --border-radius: 6px; /* Bordas arredondadas no botão */
-  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  --background: #28a745; /* Verde para o botão */
-  --color: #fff; /* Texto branco */
+  --border-radius: 6px;
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --background: #28a745;
+  --color: #fff;
 
   ion-icon {
-    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    margin-right: 8px;
   }
 
   span {
-    display: inline-block; /* Garante que o texto e o ícone estejam alinhados horizontalmente */
+    display: inline-block;
   }
 }

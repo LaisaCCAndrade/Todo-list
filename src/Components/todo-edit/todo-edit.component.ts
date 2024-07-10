@@ -21,7 +21,7 @@ export class TodoEditComponent implements OnInit {
     this.todoForm = this.fb.group({
       title: [''],
       description: [''],
-      isCompleted: [false]
+      isCompleted: [false],
     });
   }
 
@@ -29,7 +29,7 @@ export class TodoEditComponent implements OnInit {
     if (this.todo) {
       this.todoForm.patchValue({
         title: this.todo.title,
-        description: this.todo.description
+        description: this.todo.description,
       });
     }
   }

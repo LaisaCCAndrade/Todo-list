@@ -9,8 +9,8 @@ describe('TodoEditComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoEditComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [TodoEditComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TodoEditComponent);
